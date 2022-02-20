@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genres</title>
+</head>
+<body>
+<h2>{{movies_count}} Фильмов по жанру {{genre}}</h2>
+<ol>
+    {% for movie in movies %}
+    <li>{{movie}}</li>
+    {% endfor %}
+</ol>
+<br>
+<a href="/">Главная</a>
+</body>
+</html>

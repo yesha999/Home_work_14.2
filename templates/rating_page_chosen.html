@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies by rating</title>
+</head>
+<body>
+<a href="/rating">Назад</a>
+<h2>{{movies_count}} Фильмов {{header}}</h2>
+<ol>
+    {% for movie in movies %}
+    <li>{{movie}}</li>
+    {% endfor %}
+  </ol>
+<br>
+<a href="/">Главная</a>
+</body>
+</html>

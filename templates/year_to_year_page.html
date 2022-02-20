@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>100 Фильмов между {{year_1}} и {{year_2}}</h2>
+<ol>
+    {% for movie in movies %}
+    <li>{{movie}}</li>
+    {% endfor %}
+  </ol>
+<br>
+<a href="/">Главная</a>
+</body>
+</html>
