@@ -5,6 +5,7 @@ __all__ = ['search_title', 'search_years', 'search_rating', 'search_genre']
 
 
 def search_title(title):
+    """Результат - один фильм для @app.route('/movie/<title>')"""
     connection = sqlite3.connect("netflix.db")
     cursor = connection.cursor()
     found_result = ['Фильм не найден :(']
@@ -23,6 +24,7 @@ def search_title(title):
 
 
 def search_years(year_1, year_2):
+    """Результат - список словарей фильмов между указанными годами"""
     year_1 = int(year_1)
     year_2 = int(year_2)
     connection = sqlite3.connect("netflix.db")
@@ -45,6 +47,7 @@ def search_years(year_1, year_2):
 
 
 def search_rating(rating):
+    """Результат - список словарей фильмов с необходимым рейтингом"""
     connection = sqlite3.connect("netflix.db")
     cursor = connection.cursor()
     found_results = []
@@ -75,6 +78,7 @@ def search_rating(rating):
 
 
 def search_genre(genre):
+    """Результат - список словарей фильмов, содержащих необходмый жанр"""
     connection = sqlite3.connect("netflix.db")
     cursor = connection.cursor()
     found_results = []
@@ -124,6 +128,9 @@ print(step_five_function('Rose McIver', 'Ben Lamb'))
 
 
 def step_six_sql(type, release_year, listed_in):
+    """Напишите функцию, с помощью которой можно будет
+     передавать тип картины (фильм или сериал), год выпуска и ее жанр и
+     получать на выходе список названий картин с их описаниями в JSON."""
     connection = sqlite3.connect("netflix.db")
     cursor = connection.cursor()
     found_results = []
